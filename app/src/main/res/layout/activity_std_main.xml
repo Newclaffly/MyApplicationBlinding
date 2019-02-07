@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="java.lang.String"/>
+        <variable name="student" type="com.example.myapplicationblinding.Student"/>
+    </data>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="395dp"
+            android:layout_height="587dp">
+        <TextView
+                android:text="@{Integer.toString(student.id)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/id"/>
+        <TextView
+                android:text="@={student.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/name"/>
+        <TextView
+                android:text="@={student.major}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/major"/>
+        <TextView
+                android:text="@={student.faculty}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/faculty"/>
+    </LinearLayout>
+</RelativeLayout>
+        </layout>
